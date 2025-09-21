@@ -6,21 +6,21 @@ my_string = "My Country Pakistan"
 my_string [0:5]
 print(my_string[0: 20])
 
-# string substitution
+# string substitution with f-strings
 var = "cookies"
-newstring = "I like  %s " % var
+newstring = f"I like  {var}"
 newstring
 
 var = "cookies"
-anotherstring = "I like  %s and %s  " % ("python" , var)
+anotherstring = f"I like  {'python'} and {var}"
 anotherstring
 
-my_string = " %i + %i = %i " % (1,2,3)  # integer
+my_string = f" {1} + {2} = {3} " # integer
 my_string
 
 # %%
 # float
-float_string = "%.5f" % (1.3456)       # 5f means the five digit after point.
+float_string = f"{1.3456.5f}"       # 5f means the five digit after point.
 float_string
 
 # %%
@@ -38,17 +38,17 @@ print(my_nested_list)
 # list extend method
 combo_list =[]
 one_list = [4,5]
-combo_list.extend(one_list)
+combo_list.extend(one_list) # adds all the items from one_list to combo_list
 combo_list
 
 my_list =[1,2,3]
 my_list2 = ["a", "b","c"]
-combo_list = my_list+my_list2
+combo_list = my_list + my_list2
 combo_list
 
 # sorting out a list 
-alpha_list =[34,76,56,54,43,23]
-sorted_list = alpha_list.sort()
+alpha_list = [34, 76, 56, 54, 43, 23]
+sorted_list = alpha_list.sort() # By default in ascending order
 print(sorted_list)
 
 # %%
@@ -70,18 +70,18 @@ dict = {"name" : "Sharfoo" , "addres" : "123 Gulshan"}
 
 #Function
 if 2>1:
-    print("This is a Ture statement")
+    print("This is a True statement")
 
 var1 = 3
 var2 = 5
 if var1 > var2:
     print("This is also True")
 else:
-    print("This is a False")    
+    print("This is False")    
 
     
 value = 45
-if value <10:
+if value < 10:
     print("That's a great deal!")
 elif 10<= value<=20:
     print("I'd still pay that..")    
@@ -89,27 +89,27 @@ else:
     print("Wow! That's too much..")   
 
 # %%
-# boolean      Ture or False
+# boolean      True or False
 # or ,,,and   ,,, not
 
 
 x =  13
 y =  10
-if x<10 or y> 15 :
-    print("This is statement was Ture")
+if x < 10 or y > 15:
+    print("This is statement was True")
 
 
-my_list = [1,2,3,4]
+my_list = [1, 2 ,3 ,4]
 x = 10 
 y = 11
 if x not in my_list and y != 10:
-    print("This is Ture! ")
+    print("This is True! ")
 else:
     print("This is False !")    
 
 x = 8
 if x != 11:
-    print("This is Ture !")
+    print("This is True !")
 
 #if empty_list == []:              This code is not running
     #print("it's an empty list")
@@ -123,9 +123,9 @@ if x != 11:
 
 # %%
 if 2>8:
-    print("This is a Ture Statement")
+    print("This is a True Statement")
 
-print("This ia a  backslash \\")
+print("This ia a  backslash \\") # Type the backslash twice in order to print one
 
 dict = {"one":1,"two":2, "three":3}
 
@@ -134,10 +134,10 @@ for key in dict:
 
 
 for number in range(10):
-  if number %2==0:
+  if number % 2 == 0:
     print(number)
 
-a_dict = {1:"one",2:"two",3:"three"}
+a_dict = {1: "one", 2: "two",3: "three"}
 keys = a_dict.keys()
 sorted(keys)
 for key in keys:
@@ -156,17 +156,17 @@ list =[[1,2,3],[4,5,6],[7,8,9]]
 print({i:str(i)  for i in range(5)})
 
 
-my_dict = {1:'dog',2:"cat",3:"horse"}
+my_dict = {1: 'dog', 2: "cat", 3: "horse"}
 print({value:key for key, value in my_dict.items()})
 
 # set coprehension
-my_list = [1,2,2,3,3,4,5,6,7,8]
+my_list = [1, 2, 2, 3, 3, 4, 5, 6, 7, 8]
 my_set = set(my_list)
 my_set
 
 my_list = [1,2,3,4,5]
 for i in my_list :
- if i ==3:
+ if i == 3:
     print("items found!")
     break
 else:
@@ -217,9 +217,9 @@ except KeyError:
 else:
     print("No error occured")    
 
-my_dict = {"a":1 , "b":2 ,"c":3}
+my_dict = {"a": 1 , "b": 2 , "c": 3}
 try:
-    value =my_dict["a"]
+    value = my_dict["a"]
 except KeyError:
     print("A KeyError occured")
 else:
@@ -253,5 +253,6 @@ vec = [[1,2,3],[4,5,6],[7,8,9]]
 
 mylist = [ tayyaba for tayyaba in "alnafi"]
 mylist
+
 
 
